@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2026 8BitDo -->
+<component type="firmware">
+  <id>com.8bitdo.sn30proforandroid.firmware</id>
+  <name>SN30 Pro for Android</name>
+  <name_variant_suffix>Bluetooth Controller</name_variant_suffix>
+  <summary>Firmware for SN30 Pro for Android Bluetooth Controller</summary>
+  <description>
+    <p>
+      Updating the firmware on your SN30 Pro for Android controller improves performance and adds new features.
+    </p>
+  </description>
+  <provides>
+    <!-- USB\VID_2DC8&PID_2100 -->
+    <firmware type="flashed">a050eb06-ae80-5879-8711-e84a4537c2fa</firmware>
+    <!-- USB\VID_2DC8&PID_2101 -->
+    <firmware type="flashed">02853cb1-1ab1-54a5-b8f5-be84bf2e7cca</firmware>
+    <!-- USB\VID_2DC8&PID_5750 is Bootloader -->
+    <firmware type="flashed">b02f1319-c1c4-54f4-b7f2-5bb3552f6a9e</firmware>
+  </provides>
+  <url type="homepage">https://www.8bitdo.com/sn30-pro-for-xbox-cloud-gaming-on-android/</url>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>proprietary</project_license>
+  <developer_name>8BitDo</developer_name>
+  <releases>
+    <release urgency="medium" version="2.02" date="2022-08-25">
+      <checksum filename="Firmware_SN30_Pro_for_Android_v2.02.dat" target="content"/>
+      <description>
+        <p>
+          This stable release fixes the following issues:
+        </p>
+        <ul>
+          <li>1. Optimized the input lag of Bluetooth.</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://raw.githubusercontent.com/hughsie/8bitdo-firmware/master/screenshots/SN30_Pro_for_Android.png</image>
+      <caption>Disconnect the USB cable and hold the Xbox button for 6 seconds to power off. Then, hold LB + RB + Xbox simultaneously until the top green LED flashes, and finally reconnect the USB cable.</caption>
+    </screenshot>
+  </screenshots>
+
+  <!-- only newer versions of fwupd know about the new VID -->
+  <requires>
+    <id compare="ge" version="1.5.13">org.freedesktop.fwupd</id>
+  </requires>
+  <categories>
+    <category>X-Device</category>
+  </categories>
+  <custom>
+    <value key="LVFS::UpdateProtocol">com.8bitdo</value>
+  </custom>
+
+  <keywords>
+    <keyword>gamepad</keyword>
+    <keyword>controller</keyword>
+    <keyword>8bitdo</keyword>
+  </keywords>
+</component>
